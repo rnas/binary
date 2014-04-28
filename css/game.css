@@ -1,0 +1,175 @@
+/* Resets body padding */
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Helvetica, Arial, Sans;
+}
+
+#screen_limit {
+	width: 320px;
+	height: 480px;
+	background: #555;
+}
+
+.hidden {
+	display: none;
+}
+
+.screen {
+	width: 320px;
+	height: 480px;
+}
+
+.screen h1 {
+	color: #00FF00;
+	border-bottom: solid 2px #000;
+	padding: 5px;
+}
+
+.screen p {
+	color: #00FF00;
+	margin-left: 20px;
+}
+
+.screen ul {
+	color: #00FF00;
+	margin-left: 30px;
+}
+
+.screen .button {
+	border: solid 1px #00FF00;
+	margin: 30px;
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+	color: #00FF00;
+	font-size: 36px;
+}
+
+/*	about screen	*/
+
+#about {
+	
+}
+
+/*	menu screen		*/
+
+#spash {
+
+}
+
+/* 	game screen 	*/
+#game {
+
+}
+
+#game .top_menu {
+	background: #444;
+	height: 60px;
+	color: #00FF00;
+}
+
+#game .top_menu .back {
+	float: left;
+	padding: 20px;
+	border-right: solid 2px #000;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+#game .top_menu h2{
+	padding-top: 15px;
+	padding-left: 20px;
+}
+
+/*	game score info	*/
+#game .score_info {
+	/*border: solid #00FF00;*/
+	height: 60px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#game .score_info .score {
+	margin-left: 15px;
+	width: 140px;
+	display: inline-block;
+	margin-top: 5px;
+}
+
+#game .score_info .score .label {
+	color: #00FF00;
+	width: 49%;
+	display: inline-block;
+	font-weight: 200;
+	font-size: 15px;
+	padding-top: 2px;
+}
+
+#game .score_info .score .value {
+	display: inline-block;
+	color: #00FF00;
+	width: 40px;
+	height: 20px;
+	float: right;
+	background: #000;
+	margin-right: 20px;
+	text-align: right;
+	padding-right: 5px;
+	padding-top: 2px;
+}
+				
+
+#game .game_goal {
+	background: #444;
+	height: 160px;
+}
+
+#game .game_goal .goal {
+	width: 140px;
+	display: inline-block;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+#game .game_goal .goal .label {
+	background: #000;
+	color: #66FF66;
+	font-size: 12px;
+	width: 40%;
+	padding: 5px;
+}
+
+#game .game_goal .goal .value {
+	width: 100%;
+	height: 50px;
+	background: #000;
+	color: #00FF00;
+	text-align: center;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	font-size: 36px;
+}
+
+#game .game_goal .timer {
+	background: #000;
+	height: 20px;
+	width: 300px;
+	margin: 10px 10px 20px 10px;
+}
+			
+#game .keys {
+
+}
+
+#game .keys .key {
+	border: solid 2px #00FF00;
+	width: 60px;
+	display: inline-block;
+	color: #00FF00;
+	text-align: center;
+	margin-left: 10px;
+	padding: 14px 0px;
+	margin-top: 20px;
+}

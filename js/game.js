@@ -16,6 +16,7 @@ var game = {
 	reset: function() {
 		game.level.reset();
 		game.timer.reset();
+		game.level.play();
 	},
 	timer: {
 		reset: function() {
@@ -69,6 +70,10 @@ var game = {
 			if (game.done == game.goal) {
 
 			}
+		}, 
+		keys_reset: function() {
+			game.done = 0
+			// Reseta graficos dos botoes
 		}
 	},
 	level: {
@@ -85,6 +90,13 @@ var game = {
 				game.challanges++;
 				game.challange = 1;
 			}
+		}, 
+		play: function(){
+			game.numbers.keys_reset();
+			game.goal = game.numbers.generate();
+			game.done = 0;
+			//
+
 		}
 	}
 

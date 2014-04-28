@@ -1,3 +1,3 @@
 #Binary Master
 
-A Firefox Os challang game about base conversion. 
+A Firefox Os challange game about base conversion. 

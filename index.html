@@ -1,11 +1,12 @@
 <html>
 <head>
 	<title>Binary Master</title>
+	<link rel="stylesheet" type="text/css" href="css/game.css">
 </head>
 <body>
-	<div class="screen_limit">
+	<div id="screen_limit">
 
-		<div class="screen" id="about">
+		<div class="screen hidden" id="about">
 			<h1>About</h1>
 
 			<p>This game was created by:</p>
@@ -13,40 +14,56 @@
 				<li>Raphael Pawlik [rnaswaty@gmail.com]</li>
 			</ul>
 
-			<div class="play goto_play" >Play</div>
+			<div class="button goto_play" >Play</div>
 		</div>
-		<div class="screen" id="spash">
+		<div class="screen hidden" id="spash">
 			<h1>Binary Master</h1>
-			<ul>
-				<li class="goto_about" >About</li>
-				<li class="goto_plat">Play</li>
-			</ul>
+			
+				<div class="button goto_about" >About</div>
+				<div class="button goto_plat">Play</div>
+			
 		</div>
 		<div class="screen" id="game">
 			
 			<div class="top_menu">
+				<span class="back">&lt;-</span>
 				<h2>Binary Master</h2>
 			</div>
 
 			<div class="score_info">
-				<div class="level"></div>
-				<div class="status"></div>
-				<div class="score"></div>
-				<div class="record"></div>
+				<div class="score level">
+					<div class="label">Level</div>
+					<div class="value"></div>
+				</div>
+				<div class="score status">
+					<div class="label">Chalange</div>
+					<div class="value"></div>
+				</div>
+				<div class="score record">
+					<div class="label">Record</div>
+					<div class="value"></div>
+				</div>
+				<div class="score score">
+					<div class="label">Score</div>
+					<div class="value"></div>
+				</div>
+				
 			</div>
 
-			<div class="goal">
-				<div class="label">Goal</div>
-				<div class="value"></div>
-			</div>
-			<div class="done">
-				<div class="label">Done</div>
-				<div class="value"></div>
-			</div>
+			<div class="game_goal">
+				<div class="goal">
+					<div class="label">Goal</div>
+					<div class="value"></div>
+				</div>
+				<div class="goal done">
+					<div class="label">Done</div>
+					<div class="value"></div>
+				</div>
 
-			<div class="timer">
-				<div class="time_bar">
-					<div class="time"></div>
+				<div class="timer">
+					<div class="time_bar">
+						<div class="time"></div>
+					</div>
 				</div>
 			</div>
 

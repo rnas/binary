@@ -1,0 +1,9 @@
+{
+  "name": "Binary Master",
+  "description": "Binary Master is game for training binary number convertions.",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Raphael Pawlik",
+  },
+  "default_locale": "en"
+}

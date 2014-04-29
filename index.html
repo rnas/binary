@@ -6,7 +6,10 @@
 <body>
 	<div id="screen_limit">
 		<div class="screen" id="about">
-			<h1>About</h1>
+			<div class="top_menu">
+				<span class="back" onclick="javascript:controls.back()">&lt;-</span>
+				<h2>About</h2>
+			</div>
 			<p>This game was created by:</p>
 			<ul>
 				<li>Raphael Pawlik [rnaswaty@gmail.com]</li>
@@ -71,19 +74,23 @@
 
 		<div class="screen" id="score">
 			<div class="top_menu">
-				<span class="back">&lt;-</span>
+				<span class="back" onclick="javascript:controls.back()">&lt;-</span>
+				<h2>High Scores</h2>
 			</div>
 
 			<br><br>
-			<h2>High Scores</h2>
+			
 			<p>You Lost!</p>
+			<p>The best score was: <strong class="game_record"></strong> </p>
 			<p>Your last score was: <strong class="final_score"></strong> </p>
+
 
 			<div class="button" onclick="javascript:controls.play()">Play Again</div>
 		</div>
 
 
 	</div>
+	<script type="text/javascript" src="js/storage.js"></script>
 	<script type="text/javascript" src="js/controls.js"></script>
 	<script type="text/javascript" src="js/view.js"></script>
 	<script type="text/javascript" src="js/game.js"></script>

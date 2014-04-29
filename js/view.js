@@ -1,3 +1,8 @@
+/*
+
+	View part, providing view interaction, animations and effects. 
+
+*/
 var view = {
 	update: {
 		score: function(value) {
@@ -38,6 +43,9 @@ var view = {
 		},
 		final_score: function(value) {
 			document.querySelector('#score .final_score').innerHTML = value;
+		},
+		best_score: function(value) {
+			document.querySelector('#score .best_score').innerHTML = value;
 		}
 	}, 
 	animate: {

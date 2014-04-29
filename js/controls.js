@@ -11,14 +11,14 @@ var controls = {
 	}, 
 	about: function() {
 		view.animate.move_screen(0);
-		game.pause();
+		game.timer.pause();
 	}, 
 	back: function() {
 		view.animate.move_screen(-500);
-		game.pause();
+		game.timer.pause();
 	},
 	highscores: function() {
 		view.animate.move_screen(-1500);
-		game.pause();
+		game.timer.pause();
 	}, 
 }

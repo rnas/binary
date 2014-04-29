@@ -1,4 +1,8 @@
 /*
+
+	Game: providing game logic for user actions
+
+
 	Parameters:
 
 	time 		- remaining time
@@ -38,8 +42,18 @@ var game = {
 					game.time = game.time - 1; 
 					view.update.timer(game.time);	
 				} else {
+					// you loose
 					game.paused = true;
 					view.animate.move_screen(-1520);
+
+					// checks for record
+					if (game.record <= game.score) {
+						storage.set_record(game.score);
+					}
+
+					view.update.final_score(game.score);
+					view.update.best_score(game.record);
+					view.update.record(game.record);
 				}
 			}
 		}
@@ -92,6 +106,9 @@ var game = {
 			game.chalange = 1;
 			game.chalanges = 5;
 			game.score = 0;
+			game.record = storage.get_record();
+
+			view.update.record(game.record);
 		}, 
 		next: function() {
 			if (game.chalange < game.chalanges) {

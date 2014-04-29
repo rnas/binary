@@ -46,11 +46,17 @@ var game = {
 	numbers: {
 		easy_numbers: [3, 6, 12, 16, 32],
 		generate: function() {
-			if (game.current_level == 1) {
-				return game.numbers.easy();
-			} else {
-				return (Math.ceil(Math.random() * 253) + 2);
-			}
+			var random;
+
+			do {
+				if (game.current_level == 1) {
+					random = game.numbers.easy();
+				} else {
+					random = (Math.ceil(Math.random() * 253) + 2);
+				}
+			} while (game.goal == random);
+
+			return random;
 		}, 
 		easy: function() {
 			return game.numbers.easy_numbers 

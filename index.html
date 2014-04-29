@@ -16,6 +16,7 @@
 		<div class="screen" id="spash">
 			<h1>Binary Master</h1>
 			<div class="button goto_play" onclick="javascript:controls.play()">Play</div>
+			<div class="button goto_about" onclick="javascript:controls.highscores()" >Highscores</div>
 			<div class="button goto_about" onclick="javascript:controls.about()" >About</div>
 		</div>
 		<div class="screen" id="game">
@@ -71,13 +72,14 @@
 		<div class="screen" id="score">
 			<div class="top_menu">
 				<span class="back">&lt;-</span>
-				<br><br>
-				<h2>High Scores</h2>
-				<p>You Lost!</p>
-				<p>Your last score was: <strong class="final_score"></strong> </p>
-
-				<div class="button" onclick="javascript:controls.play()">Play Again</div>
 			</div>
+
+			<br><br>
+			<h2>High Scores</h2>
+			<p>You Lost!</p>
+			<p>Your last score was: <strong class="final_score"></strong> </p>
+
+			<div class="button" onclick="javascript:controls.play()">Play Again</div>
 		</div>
 
 

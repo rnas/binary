@@ -1,16 +1,17 @@
 var view = {
 	update: {
 		score: function(value) {
-			document.querySelector('#game .score_info .score').innerHTML = value;
+			console.log('asd');
+			document.querySelector('#game .score_info .score .value').innerHTML = value;
 		},
 		record: function(value) {
-			document.querySelector('#game .score_info .record').innerHTML = value;
+			document.querySelector('#game .score_info .record .value').innerHTML = value;
 		}, 
 		level: function(value) {
-			document.querySelector('#game .score_info .level').innerHTML = value;
+			document.querySelector('#game .score_info .level .value').innerHTML = value;
 		},
 		status: function(value) {
-			document.querySelector('#game .score_info .status').innerHTML = value;
+			document.querySelector('#game .score_info .status .value').innerHTML = value;
 		},
 		goal: function(value) {
 			document.querySelector('#game .game_goal .set .value').innerHTML = value;

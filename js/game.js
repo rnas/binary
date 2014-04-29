@@ -47,13 +47,14 @@ var game = {
 		easy_numbers: [3, 6, 12, 16, 32],
 		generate: function() {
 			if (game.current_level == 1) {
-				return (Math.ceil(Math.random() * 253) + 2);
+				return game.numbers.easy();
 			} else {
-				return game.number.easy();
+				return (Math.ceil(Math.random() * 253) + 2);
 			}
 		}, 
 		easy: function() {
-			return game.number.easy_numbers[Math.ceil(Math.random() * 5) - 1] ;
+			return game.numbers.easy_numbers 
+			[Math.ceil(Math.random() * game.numbers.easy_numbers.length) - 1];
 		}, 
 		click: function(value) {
 			var checked = (game.done % (2*value) < value);
@@ -69,7 +70,6 @@ var game = {
 			// update da view
 
 			if (game.done == game.goal) {
-				//console.log('xxxx');
 				game.level.next();
 			}
 		}, 
@@ -84,23 +84,30 @@ var game = {
 			game.current_level = 1;
 			game.chalange = 1;
 			game.chalanges = 5;
+			game.score = 0;
 		}, 
 		next: function() {
 			if (game.chalange < game.chalanges) {
 				game.chalange ++;
 			} else {
 				game.current_level ++;
-				game.challanges++;
-				game.challange = 1;
+				game.chalanges++;
+				game.chalange = 1;
+
+				game.timer.restart();
 			}
 
-			game.timer.restart();
 			game.level.play();
 		}, 
 		play: function() {
+			view.update.score(game.score);
 			game.numbers.done_reset();
 			game.goal = game.numbers.generate();
+			game.score = game.score + game.current_level * 10;
+
 			view.update.goal(game.goal);
+			view.update.status(game.chalange+"/"+game.chalanges);
+			view.update.level(game.current_level);
 		}
 	}
 };

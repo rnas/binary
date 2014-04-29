@@ -90,14 +90,14 @@ body {
 	margin-bottom: 15px;
 }
 
-#game .score_info .score {
+#game .score_info .total {
 	margin-left: 15px;
 	width: 140px;
 	display: inline-block;
 	margin-top: 5px;
 }
 
-#game .score_info .score .label {
+#game .score_info .total .label {
 	color: #00FF00;
 	width: 49%;
 	display: inline-block;
@@ -106,7 +106,7 @@ body {
 	padding-top: 2px;
 }
 
-#game .score_info .score .value {
+#game .score_info .total .value {
 	display: inline-block;
 	color: #00FF00;
 	width: 40px;

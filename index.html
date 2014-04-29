@@ -5,22 +5,22 @@
 </head>
 <body>
 	<div id="screen_limit">
-		<div class="screen hidden" id="about">
+		<div class="screen" id="about">
 			<h1>About</h1>
 			<p>This game was created by:</p>
 			<ul>
 				<li>Raphael Pawlik [rnaswaty@gmail.com]</li>
 			</ul>
-			<div class="button goto_play">Play</div>
+			<div class="button goto_play" onclick="javascript:controls.play()">Play</div>
 		</div>
-		<div class="screen hidden" id="spash">
+		<div class="screen" id="spash">
 			<h1>Binary Master</h1>
-			<div class="button goto_about" >About</div>
-			<div class="button goto_plat">Play</div>
+			<div class="button goto_play" onclick="javascript:controls.play()">Play</div>
+			<div class="button goto_about" onclick="javascript:controls.about()" >About</div>
 		</div>
 		<div class="screen" id="game">
 			<div class="top_menu">
-				<span class="back">&lt;-</span>
+				<span class="back" onclick="javascript:controls.back()">&lt;-</span>
 				<h2>Binary Master</h2>
 			</div>
 			<div class="score_info">
@@ -67,6 +67,20 @@
 				<div class="key" onclick="javascript:controls.key(128)" id="key_128">128</div>
 			</div>
 		</div>
+
+		<div class="screen" id="score">
+			<div class="top_menu">
+				<span class="back">&lt;-</span>
+				<br><br>
+				<h2>High Scores</h2>
+				<p>You Lost!</p>
+				<p>Your last score was: <strong class="final_score"></strong> </p>
+
+				<div class="button" onclick="javascript:controls.play()">Play Again</div>
+			</div>
+		</div>
+
+
 	</div>
 	<script type="text/javascript" src="js/controls.js"></script>
 	<script type="text/javascript" src="js/view.js"></script>

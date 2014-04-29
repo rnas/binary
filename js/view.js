@@ -34,11 +34,15 @@ var view = {
 			var keys = document.querySelectorAll('#game .keys .key');
 			for (var i = 0; i < keys.length; i++) {
 				keys[i].className = "key";
-			};
-			
+			};	
 		},
-
-
-
+		final_score: function(value) {
+			document.querySelector('#score .final_score').innerHTML = value;
+		}
+	}, 
+	animate: {
+		move_screen: function(value) {
+			document.querySelector('#about').style.marginTop = value+"px";
+		}
 	}
 }

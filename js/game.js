@@ -38,7 +38,8 @@ var game = {
 					game.time = game.time - 1; 
 					view.update.timer(game.time);	
 				} else {
-					return false;
+					game.paused = true;
+					view.animate.move_screen(-1520);
 				}
 			}
 		}
@@ -117,5 +118,3 @@ var game = {
 		}
 	}
 };
-
-game.reset();

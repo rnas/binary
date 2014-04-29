@@ -178,3 +178,10 @@ body {
 	padding: 14px 0px;
 	margin-top: 20px;
 }
+
+#game .keys .key.active {
+	border: solid 2px #000;
+	background: #00FF00;
+	color: #000;
+}
+

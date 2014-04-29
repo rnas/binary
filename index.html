@@ -44,11 +44,11 @@
 			<div class="game_goal">
 				<div class="goal set">
 					<div class="label">Goal</div>
-					<div class="value">1</div>
+					<div class="value">0</div>
 				</div>
 				<div class="goal done">
 					<div class="label">Done</div>
-					<div class="value">16</div>
+					<div class="value">0</div>
 				</div>
 				<div class="timer">
 					<div class="time_bar">
@@ -57,17 +57,18 @@
 				</div>
 			</div>
 			<div class="keys">
-				<div class="key" id="key_1" value="1">1</div>
-				<div class="key" id="key_2" value="2">2</div>
-				<div class="key" id="key_4" value="4">4</div>
-				<div class="key" id="key_8" value="8">8</div>
-				<div class="key" id="key_16" value="16">16</div>
-				<div class="key" id="key_32" value="32">32</div>
-				<div class="key" id="key_64" value="64">64</div>
-				<div class="key" id="key_128" value="128">128</div>
+				<div class="key" onclick="javascript:controls.key(1)" id="key_1">1</div>
+				<div class="key" onclick="javascript:controls.key(2)" id="key_2">2</div>
+				<div class="key" onclick="javascript:controls.key(4)" id="key_4">4</div>
+				<div class="key" onclick="javascript:controls.key(8)" id="key_8">8</div>
+				<div class="key" onclick="javascript:controls.key(16)" id="key_16">16</div>
+				<div class="key" onclick="javascript:controls.key(32)" id="key_32">32</div>
+				<div class="key" onclick="javascript:controls.key(64)" id="key_64">64</div>
+				<div class="key" onclick="javascript:controls.key(128)" id="key_128">128</div>
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="js/controls.js"></script>
 	<script type="text/javascript" src="js/view.js"></script>
 	<script type="text/javascript" src="js/game.js"></script>
 </body>

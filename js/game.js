@@ -8,15 +8,16 @@
 	score 		
 	goal
 	done
-	level
+	current_level
 	challange
 */
 
 var game = {
 	reset: function() {
 		game.level.reset();
-		game.timer.reset();
 		game.level.play();
+		game.timer.reset();
+		
 	},
 	timer: {
 		reset: function() {
@@ -50,7 +51,7 @@ var game = {
 	numbers: {
 		easy_numbers: [3, 6, 12, 16, 32],
 		generate: function() {
-			if (game.level == 1) {
+			if (game.current_level == 1) {
 				return (Math.ceil(Math.random() * 253) + 2);
 			} else {
 				return game.number.easy();
@@ -78,7 +79,7 @@ var game = {
 	},
 	level: {
 		reset: function() {
-			game.level = 1;
+			game.current_level = 1;
 			game.chalange = 1;
 			game.chalanges = 5;
 		}, 
@@ -86,22 +87,17 @@ var game = {
 			if (game.chalange < game.chalanges) {
 				game.chalange ++;
 			} else {
-				game.level ++;
+				game.current_level ++;
 				game.challanges++;
 				game.challange = 1;
 			}
 		}, 
-		play: function(){
+		play: function() {
 			game.numbers.keys_reset();
 			game.goal = game.numbers.generate();
-			game.done = 0;
-			//
 
 		}
 	}
-
-
 };
-
 
 game.reset();

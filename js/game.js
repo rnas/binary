@@ -26,6 +26,8 @@ var game = {
 			game.time = 60;
 			game.paused=false;
 			game.timer.update();
+
+			view.update.timer(60);
 		}, 
 		pause: function() {
 			game.paused=true;
@@ -38,14 +40,12 @@ var game = {
 					setTimeout(game.timer.update, 1000);
 
 					game.time = game.time - 1; 
-					game.timer.display(game.time);		
+					
+					view.update.timer(game.time);	
 				} else {
 					return false;
 				}
 			}
-		},
-		display: function(time) {
-			// updates the time display
 		}
 	},
 	numbers: {
@@ -73,7 +73,8 @@ var game = {
 			}
 		}, 
 		keys_reset: function() {
-			game.done = 0
+			game.done = 0;
+			view.update.done(0);
 			// Reseta graficos dos botoes
 		}
 	},
@@ -95,6 +96,7 @@ var game = {
 		play: function() {
 			game.numbers.keys_reset();
 			game.goal = game.numbers.generate();
+			view.update.goal(game.goal);
 
 		}
 	}

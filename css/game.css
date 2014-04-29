@@ -158,6 +158,11 @@ body {
 	width: 300px;
 	margin: 10px 10px 20px 10px;
 }
+
+#game .game_goal .timer .time_bar {
+	background: #00FF00;
+	height: 20px;
+}
 			
 #game .keys {
 

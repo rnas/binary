@@ -6,7 +6,6 @@
 var view = {
 	update: {
 		score: function(value) {
-			console.log('asd');
 			document.querySelector('#game .score_info .score .value').innerHTML = value;
 		},
 		record: function(value) {
@@ -50,7 +49,9 @@ var view = {
 	}, 
 	animate: {
 		move_screen: function(value) {
-			document.querySelector('#about').style.marginTop = value+"px";
+			$('#about').animate({'margin-top': value+'px'}, 300);
+
+			//document.querySelector('#about').style.marginTop = value+"px";
 		}
 	}
 }

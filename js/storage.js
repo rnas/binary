@@ -4,15 +4,15 @@
 
 */
 var storage = {
-	set_record: function(record) {
-		var record = localStorage.setItem('record', record);
-		if (record == undefined) {
+	get_record: function(record) {
+		var record = localStorage.getItem('record');
+		if (record === null) {
 			return 0;
 		} else {
 			return record;
 		}
 	}, 
-	get_record: function() {
-		localStorage.getItem('record');
+	set_record: function() {
+		localStorage.setItem('record', record);
 	}
 }

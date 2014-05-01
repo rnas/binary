@@ -44,7 +44,7 @@ var game = {
 				} else {
 					// you loose
 					game.paused = true;
-					view.animate.move_screen(-1520);
+					view.animate.move_screen(-1440);
 
 					// checks for record
 					if (game.record <= game.score) {

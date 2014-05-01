@@ -6,7 +6,7 @@ var controls = {
 
 	}, 
 	play: function() {
-		view.animate.move_screen(-1020);
+		view.animate.move_screen(-960);
 		game.reset();
 	}, 
 	about: function() {
@@ -14,11 +14,11 @@ var controls = {
 		game.timer.pause();
 	}, 
 	back: function() {
-		view.animate.move_screen(-500);
+		view.animate.move_screen(-480);
 		game.timer.pause();
 	},
 	highscores: function() {
-		view.animate.move_screen(-1500);
+		view.animate.move_screen(-1440);
 		game.timer.pause();
 	}, 
 }

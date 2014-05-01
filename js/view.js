@@ -20,12 +20,15 @@ var view = {
 		goal: function(value) {
 			document.querySelector('#game .game_goal .set .value').innerHTML = value;
 		},
+		time: function(value) {
+			document.querySelector('#game .game_goal .time .value').innerHTML = value;
+		},
 		done: function(value) {
 			document.querySelector('#game .game_goal .done .value').innerHTML = value;
 		},
 		timer: function(value) {
-			value = (value/60)*300;
-			document.querySelector('#game .timer .time_bar').style.width = value+"px";
+			document.querySelector('#game .timer .time_bar').style.width = ((value/60)*300)+"px";
+			view.update.time(value);
 		}, 
 		key: function(key, value) {
 			if (value) { 

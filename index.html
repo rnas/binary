@@ -8,7 +8,6 @@
 		<div class="screen" id="about">
 			<div class="top_menu">
 				<span class="back" onclick="javascript:controls.back()"></span>
-				<!-- <h2>Binary Master</h2> -->
 			</div>
 			<h2>About</h2>
 			<p>This game was created by:</p>
@@ -18,17 +17,16 @@
 			<div class="button goto_play" onclick="javascript:controls.play()">Play</div>
 		</div>
 		<div class="screen" id="spash">
-			<div class="top_menu">
-				<span class="back" onclick="javascript:controls.back()"></span>
-			</div>
+			<div class="top_menu"></div>
+			<!-- <p>Welcome to binary master!</p> -->
 			<div class="button goto_play" onclick="javascript:controls.play()">Play</div>
 			<div class="button goto_about" onclick="javascript:controls.highscores()" >Highscores</div>
 			<div class="button goto_about" onclick="javascript:controls.about()" >About</div>
+			<div class="button goto_help" onclick="javascript:controls.help()" >Help</div>
 		</div>
 		<div class="screen" id="game">
 			<div class="top_menu">
 				<span class="back" onclick="javascript:controls.back()"></span>
-				<!-- <h2>Binary Master</h2> -->
 			</div>
 			<div class="score_info">
 				<div class="total level">
@@ -55,6 +53,10 @@
 				</div>
 				<div class="goal done">
 					<div class="label">Done</div>
+					<div class="value">0</div>
+				</div>
+				<div class="goal time">
+					<div class="label">Time</div>
 					<div class="value">0</div>
 				</div>
 				<div class="timer">

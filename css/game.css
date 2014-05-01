@@ -20,6 +20,7 @@ body {
 .screen {
 	width: 320px;
 	height: 480px;
+	background: url('../imgs/bg.png');
 }
 
 .screen h1 {
@@ -47,7 +48,9 @@ body {
 
 .screen .top_menu .back {
 	float: left;
-	padding: 20px;
+	margin-left: 5px;	
+	width: 35px;
+	height: 40px;
 	margin-right: 20px;
 	margin-top: 3px;
 	cursor: pointer;
@@ -60,13 +63,15 @@ body {
 }
 
 .screen .button {
-	border: solid 1px #00FF00;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.7);
+	background: #222;
+	font-weight: 200;
 	margin: 30px;
 	padding: 10px;
 	text-align: center;
 	cursor: pointer;
-	color: #00FF00;
-	font-size: 36px;
+	color: #CCC;
+	font-size: 24px;
 }
 
 /*	about screen	*/
@@ -116,7 +121,7 @@ body {
 	width: 40px;
 	height: 20px;
 	float: right;
-	background: #000;
+	background: #222;
 	margin-right: 20px;
 	text-align: right;
 	padding-right: 5px;
@@ -130,30 +135,32 @@ body {
 }
 
 #game .game_goal .goal {
-	width: 140px;
+	width: 90px;
 	display: inline-block;
 	margin-top: 10px;
 	margin-left: 10px;
 	margin-bottom: 10px;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.7);
 }
 
 #game .game_goal .goal .label {
-	background: #000;
-	color: #66FF66;
+	background: #222;
+	text-align: center;
+	color: #CCC;
 	font-size: 12px;
-	width: 40%;
 	padding: 5px;
 }
 
 #game .game_goal .goal .value {
 	width: 100%;
 	height: 50px;
-	background: #000;
-	color: #00FF00;
+	background: #CCC;
+	color: #222;
 	text-align: center;
 	padding-top: 8px;
 	padding-bottom: 8px;
 	font-size: 36px;
+	box-shadow: inset 0px 0px 20px rgba(0,0,0,0.6);
 }
 
 #game .game_goal .timer {
@@ -166,6 +173,7 @@ body {
 #game .game_goal .timer .time_bar {
 	background: #00FF00;
 	height: 20px;
+	box-shadow: inset 0px 0px 20px rgba(0,0,0,0.7);
 }
 			
 #game .keys {
@@ -173,7 +181,11 @@ body {
 }
 
 #game .keys .key {
-	border: solid 2px #00FF00;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.7);
+	background: #222;
+	cursor: pointer;
+
+	border: solid 2px #222;
 	width: 60px;
 	display: inline-block;
 	color: #00FF00;
@@ -184,7 +196,8 @@ body {
 }
 
 #game .keys .key.active {
-	border: solid 2px #000;
+	border: solid 2px #444;
+	box-shadow: inset 0px 0px 20px rgba(0,0,0,0.7), 0px 0px 20px rgba(0,255,0,0.7);
 	background: #00FF00;
 	color: #000;
 }

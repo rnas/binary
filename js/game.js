@@ -40,7 +40,7 @@ var game = {
 				if (game.time > 0) {
 					setTimeout(game.timer.update, 1000);
 					game.time = game.time - 1; 
-					view.update.timer(game.time);	
+					view.update.timer(game.time);
 				} else {
 					// you loose
 					game.paused = true;

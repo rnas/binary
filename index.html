@@ -22,7 +22,7 @@
 			<div class="button goto_play" onclick="javascript:controls.play()">Play</div>
 			<div class="button goto_about" onclick="javascript:controls.highscores()" >Highscores</div>
 			<div class="button goto_about" onclick="javascript:controls.about()" >About</div>
-			<div class="button goto_help" onclick="javascript:controls.help()" >Help</div>
+			<!-- <div class="button goto_help" onclick="javascript:controls.help()" >Help</div> -->
 		</div>
 		<div class="screen" id="game">
 			<div class="top_menu">
@@ -82,18 +82,12 @@
 				<span class="back" onclick="javascript:controls.back()"></span>
 			</div>
 			<h2>High Scores</h2>
-
-			<br><br>
-			
-			<p>You Lost!</p>
-			<p>The best score was: <strong class="game_record"></strong> </p>
-			<p>Your last score was: <strong class="final_score"></strong> </p>
-
-
+			<h2 class="hidden new_record">New record!</h2>
+			<h2>Player: <strong class="game_record"></strong> </h2>
+			<!-- <p>Your last score was: <strong class="final_score"></strong> </p> -->
+			<br> <br>
 			<div class="button" onclick="javascript:controls.play()">Play Again</div>
 		</div>
-
-
 	</div>
 	<script type="text/javascript" src="libs/jquery.js"></script>
 	<script type="text/javascript" src="js/storage.js"></script>

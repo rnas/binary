@@ -5,6 +5,10 @@ var controls = {
 	reset: function() {
 
 	}, 
+	help: function() {
+		view.animate.move_screen(-1920);
+		game.reset();
+	}, 
 	play: function() {
 		view.animate.move_screen(-960);
 		game.reset();

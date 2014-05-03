@@ -49,9 +49,10 @@ var game = {
 					// checks for record
 					if (game.record <= game.score) {
 						storage.set_record(game.score);
+						game.record = game.score;
 					}
 
-					view.update.final_score(game.score);
+					//view.update.final_score(game.score);
 					view.update.best_score(game.record);
 					view.update.record(game.record);
 				}
@@ -108,6 +109,8 @@ var game = {
 			game.score = 0;
 			game.record = storage.get_record();
 
+			view.update.hide_record();
+			view.update.best_score(game.record);
 			view.update.record(game.record);
 		}, 
 		next: function() {
@@ -135,3 +138,5 @@ var game = {
 		}
 	}
 };
+
+game.level.reset();

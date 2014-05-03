@@ -12,7 +12,7 @@ var storage = {
 			return record;
 		}
 	}, 
-	set_record: function() {
+	set_record: function(record) {
 		localStorage.setItem('record', record);
 	}
 }

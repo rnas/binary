@@ -47,8 +47,14 @@ var view = {
 			document.querySelector('#score .final_score').innerHTML = value;
 		},
 		best_score: function(value) {
-			document.querySelector('#score .best_score').innerHTML = value;
-		}
+			document.querySelector('#score .game_record').innerHTML = value;
+		}, 
+		new_record: function() {
+			document.querySelector('.new_record').className = "new_record";
+		}, 
+		hide_record: function() {
+			document.querySelector('.new_record').className = "new_record hidden";
+		}, 
 	}, 
 	animate: {
 		move_screen: function(value) {

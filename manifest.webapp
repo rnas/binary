@@ -1,6 +1,12 @@
 {
+  "version": 1.0,
   "name": "Binary Master",
   "description": "Binary Master is game for training binary number convertions.",
+  "fullscreen": "true",
+  "icons": {
+    "60": "/img/icon_60.png",
+    "128": "/img/icon_128.png"
+  },
   "launch_path": "/index.html",
   "developer": {
     "name": "Raphael Pawlik",
